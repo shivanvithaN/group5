@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Above Multi-purpose Free Bootstrap Responsive Template</title>
@@ -12,6 +13,7 @@
     <link href="css/jcarousel.css" rel="stylesheet" />
     <link href="css/flexslider.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     <header>
         <div class="navbar navbar-default navbar-static-top">
@@ -27,12 +29,12 @@
                 <div class="navbar-collapse collapse ">
                     <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" /></a>
                     <ul class="nav navbar-nav">
-                    
+
                         <li><a href="index.html">Home</a></li>
-						<li class="active"><a href="mission.html">MISSION</a></li>
+                        <li class="active"><a href="mission.html">MISSION</a></li>
                         <li><a href="reviews.html">REVIEWS</a></li>
                         <li><a href="datamodel.html">DATA MODEL</a></li>
-						<li><a href="ourteam.html">OUR TEAM</a></li>
+                        <li><a href="ourteam.html">OUR TEAM</a></li>
                         <li class="active"><a href="stats.html">STATS</a></li>
                         <li><a href="contact.html">CONTACT US</a></li>
                         <!-- <li><a href="contact.html">Contact</a></li> -->
@@ -46,7 +48,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="pageTitle">////////////////////////                          GRAPHICAL REPRESENTATION OF PATIENTS</h2>
+                    <h2 class="pageTitle">//////////////////////// GRAPHICAL REPRESENTATION OF PATIENTS</h2>
                 </div>
             </div>
         </div>
@@ -59,13 +61,109 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="about-logo">
-                                         </div>
-                        
+                        </div>
+
                     </div>
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="img/graph.PNG" alt="">
-                        <div class="space"></div>
-                    </div>
+                    
+                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                    <script>
+                        var xValues = ["Fever", "Allergy", "Cough"];
+                        var yValues = [55, 49, 44];
+                        var barColors = [
+                            "#b91d47",
+                            "#00aba9",
+                            "#2b5797"
+                        ];
+
+                        new Chart("myChart", {
+                            type: "pie",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    backgroundColor: barColors,
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                title: {
+                                    display: true,
+                                    text: "World Wide patient's symptoms analysis"
+                                }
+                            }
+                        });
+                    </script>
+
+
+</head>
+
+</html>
+
+</div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <h3 class="white-text">Acknowledgement</h3>
+                <p class="grey-text text-lighten-10s">
+                    A demo website created as part of a class project for the <b>Distributed Information Systems course
+                    </b>.
+                    Thanking <b>Clinton Daniel</b> for providing us with all of the knowledge we utilized to develop
+                    this.
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget">
+                    <h5 class="widgetheading">Our Organisation</h5>
+                    <address>
+                        <strong>University of South Florida</strong><br>
+                        MUMA School of Business<br>
+                        Information Systems Management<br>
+                        Tampa, Florida, US,<br>
+                        <a href="https://www.usf.edu/">www.usf.edu</a>
+                    </address>
+
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="widget">
+                    <h5 class="widgetheading">Quick Links</h5>
+                    <ul class="link-list">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="mission.html">MISSION</a></li>
+                        <li><a href="reviews.html">REVIEWS</a></li>
+                        <li><a href="datamodel.html">DATA MODEL</a></li>
+                        <li><a href="ourteam.html">OUR TEAM</a></li>
+                        <li><a href="stats.html">STATS</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div> -->
+</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+        ================================================== -->
+<!-- Placed at the end of the document so the pages lod faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>
+<script src="js/datamodel/jquery.quicksand.js"></script>
+<script src="js/datamodel/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/owl-carousel/owl.carousel.js"></script>
+</body>
+
+</html>
